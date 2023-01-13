@@ -18,6 +18,10 @@ a {
   text-decoration: none;
   color: #867772;
   font-size: 0.9rem;
+  transition: color 0.3s ease-in;
+}
+a:hover {
+  color: #fcfcfc;
 }
 
 h1,
@@ -62,14 +66,19 @@ header section {
 header section .socials a:not(a:first-of-type) {
   margin-left: 1vw;
 }
+header section a:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
 header aside a {
   display: block;
+  width: fit-content;
   margin: 10vh 0vw;
   font-size: 0.8rem;
   display: flex;
   align-items: center;
 }
-header aside span {
+header aside a span {
   display: inline-block;
   border-radius: 50%;
   height: 16px;
@@ -78,7 +87,7 @@ header aside span {
   margin-right: 2vw;
   position: relative;
 }
-header aside span::before {
+header aside a span::before {
   content: " ";
   position: absolute;
   top: 20px;

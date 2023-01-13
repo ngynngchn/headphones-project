@@ -33,6 +33,10 @@ a {
   text-decoration: none;
   color: $header-nav;
   font-size: 0.9rem;
+  transition: color 0.3s ease-in;
+  &:hover {
+    color: $circle-color-outline;
+  }
 }
 
 h1,
@@ -53,6 +57,7 @@ p {
   margin-block: 1vh;
   line-height: 1.5rem;
 }
+
 /* ======= HEADER ======= */
 
 header {
@@ -74,32 +79,39 @@ header {
     .socials a:not(a:first-of-type) {
       margin-left: 1vw;
     }
+    a {
+      &:hover {
+        text-decoration: underline;
+        text-underline-offset: 3px;
+      }
+    }
   }
   /* ======= NAVBAR ======= */
   aside {
     a {
       display: block;
+      width: fit-content;
       margin: 10vh 0vw;
       font-size: 0.8rem;
       display: flex;
       align-items: center;
-    }
-    span {
-      display: inline-block;
-      border-radius: 50%;
-      height: 16px;
-      width: 16px;
-      border: 1px solid $circle-color;
-      margin-right: 2vw;
-      position: relative;
-      &::before {
-        content: " ";
-        position: absolute;
-        top: 20px;
-        left: 7px;
-        width: 1px;
-        height: 7vh;
-        background-color: $line-color;
+      span {
+        display: inline-block;
+        border-radius: 50%;
+        height: 16px;
+        width: 16px;
+        border: 1px solid $circle-color;
+        margin-right: 2vw;
+        position: relative;
+        &::before {
+          content: " ";
+          position: absolute;
+          top: 20px;
+          left: 7px;
+          width: 1px;
+          height: 7vh;
+          background-color: $line-color;
+        }
       }
     }
     .active {
