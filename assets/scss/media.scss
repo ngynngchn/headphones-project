@@ -10,6 +10,7 @@
   main.about {
     padding: 5vw;
     section {
+      width: 100%;
       margin: 5vh 15vh 5vh;
       flex-direction: column-reverse;
       img {
@@ -23,8 +24,8 @@
   main.simpleLayout {
     padding-top: 5vh;
     margin: 10vh 0;
+    flex-direction: column;
     .simpleLayout-img {
-      position: relative;
       width: 100%;
     }
     .simpleLayout-txt {
@@ -39,7 +40,6 @@
       width: 600px;
       height: 400px;
     }
-    padding-right: 5vw;
     .inspiration-gallery {
       article:not(article:first-of-type) {
         h2 {
@@ -51,10 +51,11 @@
   /* ======= SHOP ======= */
 
   main.shop {
-    // .shop-img {
-    //   display: none;
-    // }
+    .shop-img {
+      display: none;
+    }
     .shop-txt {
+      margin-top: 10vh;
       img {
         width: 80%;
       }

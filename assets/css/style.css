@@ -9,6 +9,7 @@
     padding: 5vw;
   }
   main.about section {
+    width: 100%;
     margin: 5vh 15vh 5vh;
     flex-direction: column-reverse;
   }
@@ -19,18 +20,15 @@
   main.simpleLayout {
     padding-top: 5vh;
     margin: 10vh 0;
+    flex-direction: column;
   }
   main.simpleLayout .simpleLayout-img {
-    position: relative;
     width: 100%;
   }
   main.simpleLayout .simpleLayout-txt {
     margin-inline: 20vw;
   }
   /* ======= INSPIRATION ======= */
-  main.inspiration {
-    padding-right: 5vw;
-  }
   main.inspiration video {
     width: 600px;
     height: 400px;
@@ -39,6 +37,12 @@
     font-size: 1.5em;
   }
   /* ======= SHOP ======= */
+  main.shop .shop-img {
+    display: none;
+  }
+  main.shop .shop-txt {
+    margin-top: 10vh;
+  }
   main.shop .shop-txt img {
     width: 80%;
   }
@@ -96,6 +100,13 @@ p {
   color: #717171;
   margin-block: 3vh 1vh;
   line-height: 1.5rem;
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  background-color: #ebccc2;
+  border-radius: 3px;
 }
 
 /* ======= HEADER ======= */
@@ -191,14 +202,22 @@ main.about section img {
   width: 50%;
   height: 30%;
 }
+main.about section article {
+  width: 60%;
+}
 
 /* ======= LONGER & EXPERIENCES ======= */
+main.simpleLayout {
+  padding-top: 0;
+  display: flex;
+  align-items: center;
+  gap: 4vw;
+}
 main.simpleLayout .simpleLayout-img {
-  position: absolute;
+  position: relative;
   z-index: 0;
   left: 0;
   top: 0;
-  width: 55vw;
   height: 100vh;
 }
 main.simpleLayout .simpleLayout-img img {
@@ -207,7 +226,7 @@ main.simpleLayout .simpleLayout-img img {
   width: 100%;
 }
 main.simpleLayout .simpleLayout-txt {
-  margin-inline: auto 10vw;
+  margin-inline: auto 5vw;
   width: 465px;
 }
 
@@ -240,14 +259,16 @@ main.inspiration .inspiration-gallery img {
 
 /* ======= SHOP ======= */
 main.shop {
-  padding-top: 10vh;
+  padding-top: 0;
+  display: flex;
+  align-items: center;
+  gap: 4vw;
 }
 main.shop .shop-img {
-  position: absolute;
+  position: relative;
   z-index: 0;
   left: 0;
   top: 0;
-  width: 55vw;
   height: 100vh;
 }
 main.shop .shop-img img {
@@ -263,14 +284,44 @@ main.shop .shop-txt {
 main.shop .shop-txt h2 {
   font-size: 2rem;
 }
-main.shop .shop-txt button {
-  padding: 10px 20px;
-  border: none;
-  background-color: #ebccc2;
-  border-radius: 3px;
-}
 main.shop .shop-txthover {
   cursor: pointer;
+}
+
+/* ======= CONTACT ======= */
+.contact h1 {
+  margin-bottom: 0vh;
+}
+.contact h3 {
+  margin-block: 2vh 1vh;
+}
+.contact label {
+  color: #717171;
+  display: block;
+  margin-block: 1vh;
+}
+.contact input,
+.contact textarea {
+  padding-block: 1vh;
+  width: 100%;
+}
+.contact button {
+  margin: 1vh 0;
+}
+.contact .newsletter {
+  display: grid;
+  grid-template-columns: 0.8fr 0.2fr;
+  grid-template-rows: min-content;
+  align-items: center;
+  gap: 1vw;
+  margin-bottom: 4vh;
+}
+.contact .newsletter h3 {
+  grid-column: 1/3;
+}
+.contact .newsletter button {
+  display: inline;
+  margin: 0;
 }
 
 /*# sourceMappingURL=style.css.map */
